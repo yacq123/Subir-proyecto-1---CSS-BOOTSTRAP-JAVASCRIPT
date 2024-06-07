@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- libreria de iconos en linea para los carritos de compras -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="p5.css" />
+
+    <script src="/app.js"></script>
+
+    <!-- librerias de iconos para footer -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <title>Flexbox vs CSS Grid</title>
+  </head>
+
+  <body>
+    <div class="barra de menu"></div>
+    <div>
+      <div class="topnav" id="myTopnav">
+        <div>
+          <a href="#" class="logo">
+            <img src="/imagenes/proyectoweb2.jpg" alt="Logo" />
+          </a>
+          <a href="#home" class="active">INICIO</a>
+          <!-- <a href="#news">PRODUCTOS</a>
+				<a href="#contact">PENDIENTE</a> -->
+          <div class="dropdown">
+            <button class="dropbtn">
+              PRODUCTOS
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              MARCAS
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 3</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              OFERTAS
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Dropdown
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Dropdown
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <a href="#about">CUENTA</a>
+          <a href="#about">CONTACTOS</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+            >&#9776;</a
+          >
+        </div>
+
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
+      </div>
+
+      <!-- <nav>
+			<a href="#" class="logo">
+				<img src="/imagenes/proyectoweb2.jpg" alt="Logo">
+			</a>
+			<div class="dropdown">
+				<a href="#">Inicio</a>
+				<div class="dropdown-content">
+					<a href="#">Submenú 1</a>
+					<a href="#">Submenú 2</a>
+					<a href="#">Submenú 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Curso</a>
+				<div class="dropdown-content">
+					<a href="#">Curso 1</a>
+					<a href="#">Curso 2</a>
+					<a href="#">Curso 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="p2.html">Postgrado</a>
+				<div class="dropdown-content">
+					<a href="#">Pos 1</a>
+					<a href="#">Pos 2</a>
+					<a href="#">Pos 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Contactos</a>
+				<div class="dropdown-content">
+					<a href="#">Con 1</a>
+					<a href="#">Con 2</a>
+					<a href="#">Con 3</a>
+				</div>
+			</div>
+		</nav> -->
+    </div>
+
+    <!--     
+################################################################################################# -->
+
+    <div class="contenedor-section">
+      <div class="alinerGrid">
+        <!-- Inicio contenedor imagenes transitivas -->
+        <div class="containertran">
+          <div class="box left">
+            <div class="slideshow">
+              <img src="imagenes/1.jpg" alt="Imagen 1" />
+              <img src="imagenes/2.jpg" alt="Imagen 2" />
+              <img src="imagenes/3.jpg" alt="Imagen 3" />
+            </div>
+          </div>
+          <div class="box right-top">
+            <div class="slideshow">
+              <img src="imagenes/4.jpg" alt="Imagen 4" />
+              <img src="imagenes/5.jpg" alt="Imagen 5" />
+              <img src="imagenes/6.jpg" alt="Imagen 6" />
+            </div>
+          </div>
+          <div class="box right-bottom">
+            <div class="slideshow">
+              <img src="imagenes/7.jpg" alt="Imagen 7" />
+              <img src="imagenes/8.jpg" alt="Imagen 8" />
+              <img src="imagenes/9.jpg" alt="Imagen 9" />
+            </div>
+          </div>
+          <div class="box right-side">
+            <div class="slideshow">
+              <img src="imagenes/10.jpg" alt="Imagen 10" />
+              <img src="imagenes/11.jpg" alt="Imagen 11" />
+              <img src="imagenes/12.jpg" alt="Imagen 12" />
+            </div>
+          </div>
+          <div class="box inf-derecha">
+            <div class="slideshow">
+              <img src="imagenes/13.jpg" alt="Imagen 13" />
+              <img src="imagenes/14.jpg" alt="Imagen 14" />
+              <img src="imagenes/15.jpg" alt="Imagen 15" />
+            </div>
+          </div>
+        </div>
+        <!--Fin contenedor imagenes transitivas -->
+      </div>
+      <!-- Contenedor de elementos -->
+      <section class="contenedor">
+        <div class="contenedor-items">
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="oferta">Oferta</div>
+            <span class="titulo-item">Middlesteel</span>
+            <img src="img/middlesteel.png" alt="" class="img-item" />
+            <span class="precio-item">$42.800</span>
+            <button class="boton-item">Agregar al Carrito</button>
+
+            <div>
+              <button
+                class="button"
+                onclick="location.href='file://home/julio/Descargas/carpetaYecidferiado/PROYECTO%20123/pagina.html'"
+              >
+                Ver Màs
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+          <div class="header-carrito">
+            <h2>Tu Carrito</h2>
+          </div>
+
+          <div class="carrito-items"></div>
+          <div class="carrito-total">
+            <div class="fila">
+              <strong>Tu Total</strong>
+              <span class="carrito-precio-total"> $120.000,00 </span>
+            </div>
+            <button class="btn-pagar">
+              Pagar <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--     
+################################################################################################# -->
+
+    <div>
+      <footer>
+        <div class="row">
+          <div class="col">
+            <img src="/imagenes/proyectoweb2.jpg" class="footer_logo" />
+            <p class="footer_about">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore harum molestias nesciunt, doloremque magni aspernatur
+              iste blanditiis, fugiat quaerat accusamus ut, vero tempore.
+              Fugiat, illum!
+            </p>
+          </div>
+          <div class="col">
+            <h3>
+              Office
+              <div class="bottom_line"><span></span></div>
+            </h3>
+            <p>2841 Romines Mill Road</p>
+            <p>Plano</p>
+            <p>Texas, ZIP 75074, United States</p>
+            <p class="footer_email">alexastockphotos@gamil.com</p>
+            <h4>+1 - 2145958195</h4>
+          </div>
+          <div class="col">
+            <h3>
+              Links
+              <div class="bottom_line"><span></span></div>
+            </h3>
+            <ul>
+              <li><a href="">HOME</a></li>
+              <li><a href="">ABOUT</a></li>
+              <li><a href="">SERVICE</a></li>
+              <li><a href="">CONTACT US</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>
+              Newsletter
+              <div class="bottom_line"><span></span></div>
+            </h3>
+            <form>
+              <ion-icon class="icon" name="mail"></ion-icon>
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">
+                <ion-icon
+                  class="icon_right"
+                  name="arrow-round-forward"
+                ></ion-icon>
+              </button>
+            </form>
+            <div class="social_icons">
+              <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+              <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+              <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+              <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Cosas Learning Ⓒ 2022 - All Rights Reserved</p>
+      </footer>
+    </div>
+
+    <script>
+      function toggleActive(element) {
+        element.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
