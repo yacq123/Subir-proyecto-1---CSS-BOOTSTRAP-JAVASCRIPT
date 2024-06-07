@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="3pagina.css">
+
+    <script src="app.js"></script>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <title>Flexbox vs CSS Grid</title>
+
+
+</head>
+
+<body>
+
+    <div class="barra de menu">
+
+    </div>
+    <div>
+        <div class="topnav" id="myTopnav">
+            <div>
+                <a href="#" class="logo">
+                    <img src="imagenes/logcag.jpg" alt="Logo">
+                </a>
+                <a href="./../0 inicio/0inicio.html" class="active">INICIO</a>
+                <!-- <a href="#news">PRODUCTOS</a>
+				<a href="#contact">PENDIENTE</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn" >PRODUCTOS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./../1Productos/1prod.html">Zapatillas Deportivas</a>
+                        <a href="./../2prodcutos/2prod.html">Vestimenta y Accesorios</a>
+                        <a href="./../3produtos/3pagina.html">Novedades</a>
+                     
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">MARCAS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://www.nike.com/">Nike</a>
+                        <a href="https://www.adidas.com/us">Adidas</a>
+                        <a href="https://www.head.com/es_ES/">Head</a>
+                        <a href="https://www.rogerfederer.com/">Federer</a>
+                        <a href="https://www.vans.com/en-us?_sr=1">Vans</a>
+                        <a href="https://www.footlocker.com/category/shoes/jordan.html">Jordan</a>
+                        <a href="https://www.reebok.com/">ReeBok</a>
+                        <a href="https://www.fila.com/">FILA</a>
+                    </div>
+                </div>
+               
+               
+                <a href="./../5cuentalogin/login.html">CUENTA</a>
+                <a href="./../6cuentareg//registro.html">REGISTRO</a>
+                <a href="./../4CONTACTANOS/contactanos.html">CONTACTOS</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+            </div>
+
+
+
+
+
+
+
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
+
+        </div>
+
+
+
+        <!-- <nav>
+			<a href="#" class="logo">
+				<img src="/imagenes/proyectoweb2.jpg" alt="Logo">
+			</a>
+			<div class="dropdown">
+				<a href="#">Inicio</a>
+				<div class="dropdown-content">
+					<a href="#">Submenú 1</a>
+					<a href="#">Submenú 2</a>
+					<a href="#">Submenú 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Curso</a>
+				<div class="dropdown-content">
+					<a href="#">Curso 1</a>
+					<a href="#">Curso 2</a>
+					<a href="#">Curso 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="p2.html">Postgrado</a>
+				<div class="dropdown-content">
+					<a href="#">Pos 1</a>
+					<a href="#">Pos 2</a>
+					<a href="#">Pos 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Contactos</a>
+				<div class="dropdown-content">
+					<a href="#">Con 1</a>
+					<a href="#">Con 2</a>
+					<a href="#">Con 3</a>
+				</div>
+			</div>
+		</nav> -->
+
+    </div>
+
+    <!--     
+################################################################################################# -->
+   
+
+<!-- Carrito de Compras -->
+<div class="carrito" id="carrito">
+    <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+    </div>
+
+    <div class="carrito-items">
+
+    </div>
+    <div class="carrito-total">
+        <div class="fila">
+            <strong>Tu Total</strong>
+            <span class="carrito-precio-total">
+                $120.000,00
+            </span>
+        </div>
+        <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+    </div>
+</div>
+</section>
+
+
+</div>
+
+
+
+<header><strong>
+        Stocks especiales</strong>
+    </header>
+  
+    
+   
+   
+ <section>
+    <div class="container1">
+    <div class="venta1">
+        <div class="imagen2">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yq96c2-hK2w?si=VtcUL12exbJHe5KX"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+        </div>
+        </div>
+        <div class="venta1">
+            <div class="imagen2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g33Cde7j04c?si=G3QrcniTPPTFgJJg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+            </div>
+        </div>
+        <div class="venta1">
+            <div class="imagen2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_R9uWNf7j6c?si=NrIxsilzqpg94-6A"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+            </div>
+        </div>
+        <div class="venta1">
+            <div class="imagen2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9jdLNiHK8rs?si=2ovnRmz3GRIEJC2U"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+            </div>
+        </div>
+
+        <div class="venta1">
+            <div class="imagen2">
+                <video width="540" height="250" controls>
+                    <source src="pagina3vid/tien.mp4" type="video/mp4">
+                    <source src="video/video.webm" type="video/webm">
+                    Your br
+        
+            </div>
+        </div>
+        <div class="venta1">
+            <div class="imagen2">
+            <video width="540" height="250" controls>
+                <source src="pagina3vid/one.mp4" type="video/mp4">
+                <source src="video/video.webm" type="video/webm">
+                Your br
+        
+            </div>
+        </div>
+
+
+
+        </div>
+ </section>
+
+ <section>
+    <div class="container2">
+        
+        <div class="item1">
+            <div class="imagen1">
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>Zapatillas RS-X Efekt PRM unisex</h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="pagina3img/imagen5.png" alt="" class="img0" id="img1">
+                
+                    </div>
+                    <span class="precio-item">317.40</span>
+                
+                </div>
+                <button class="boton">Comprar</button>
+                <button class="boton1"
+                    onclick="location.href='https://pe.puma.com/pe/es/pd/zapatillas-rs-x-efekt-prm-unisex/390776.html?dwvar_390776_color=02&dwvar_390776_size=0230'">
+                    otros sitios</button>
+            </div>
+        
+        </div>
+        <div class="item1">
+            <div class="imagen1">
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>Zapatillas SUPERNOVA RISE SHOES0</h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="pagina3img/imagen4.png" alt="" class="img0" id="img1">
+                
+                    </div>
+                    <span class="precio-item">$140</span>
+                
+                </div>
+                <button class="boton">Comprar</button>
+                <button class="boton1"
+                    onclick="location.href='https://www.adidas.com/us/supernova-rise-shoes/IE3942.html'">
+                    otros sitios</button>
+            </div>
+        
+        </div>
+        <div class="item1">
+            <div class="imagen1">
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>Zapatillas Future Rider Play On </h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="pagina3img/imagen3.png" alt="" class="img0" id="img1">
+                
+                    </div>
+                    <span class="precio-item">$189.50</span>
+                
+                </div>
+                <button class="boton">Comprar</button>
+                <button class="boton1"
+                    onclick="location.href='https://pe.puma.com/pe/es/pd/zapatillas-future-rider-play-on/393473.html?dwvar_393473_color=09'">
+                    otros sitios</button>
+            </div>
+        
+        </div>
+        <div class="item1">
+            <div class="imagen1">
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>Zapatillas Palermo Lth unisex"</h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="pagina3img/imagen2.png" alt="" class="img0" id="img1">
+                
+                    </div>
+                    <span class="precio-item">$379.00</span>
+                
+                </div>
+                <button class="boton">Comprar</button>
+                <button class="boton1"
+                    onclick="location.href='https://pe.puma.com/pe/es/pd/zapatillas-palermo-lth-unisex/396464.html?dwvar_396464_color=03'">
+                    otros sitios</button>
+            </div>
+        
+        </div>
+        <div class="item1">
+            <div class="imagen1">
+                  <div class="item">
+                            <span class="titulo-item">
+                                <h3>Zapatillas PUMA x One Piece para niños</h3>
+                            </span>
+                            <div class="imagen">
+                                <img src="pagina3img/imagen1.png" alt="" class="img0" id="img1">
+                
+                            </div>
+                            <span class="precio-item">$259.00</span>
+                
+                        </div>
+                        <button class="boton">Comprar</button>
+                        <button  class="boton1"
+                            onclick="location.href='https://pe.puma.com/pe/es/pd/zapatillas-puma-x-one-piece-para-ni%C3%B1os/396721.html?dwvar_396721_color=01'">
+                            otros sitios</button>
+                
+                    </div>
+
+            </div>
+        
+        </div>
+    </div>
+    
+
+ </section>
+
+<!--     
+################################################################################################# -->
+
+
+<div>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="imagenes/logcag.jpg" class="footer_logo">
+                <p class="footer_about">En Y&L, nos dedicamos a ofrecer a nuestros clientes una experiencia de compra inigualable. Cada prenda en nuestra colección es una muestra de diseño sofisticado, confección de alta calidad y un estilo que marca la diferencia. Nuestros diseños están pensados para aquellos que buscan destacar con clase y distinción.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Esapcio <div class="bottom_line"><span></span></div>
+                </h3>
+                <p>Home Torrez Mall</p>
+                <p>Nivel A</p>
+                <p>La Paz, 0908-8787-7878-8787 POatal, Bolivia</p>
+                <p class="footer_email">yandlshop@</p>
+                <h4>(+591) 2303289</h4>
+            </div>
+            <div class="col">
+                <h3>Enlaces <div class="bottom_line"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="./../0inicio/0inicio.html">HOME</a></li>
+                    <li><a href="./../2prodcutos/2prod.html">PRODUCTOS</a></li>  
+                    <li><a href="./../5cuentalogin/login.html">CUENTA</a></li>
+                    <li><a href="./../6cuentareg/registro.html">REGISTRO</a></li>
+                    <li><a href="./../4CONTACTANOS/contactanos.html">CONTACTANOS</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>InLine <div class="bottom_line"><span></span></div>
+                </h3>
+                <form>
+                    <ion-icon class="icon" name="mail"></ion-icon>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+                </form>
+                <div class="social_icons">
+                    <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Mercado Online Y&JⒸ 2022 - Todos los derechos Reservados</p>
+    </footer>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+</script>
+
+</body>
+
+</html>

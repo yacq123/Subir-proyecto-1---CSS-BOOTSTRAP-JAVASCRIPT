@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="2pagina.css">
+
+    <script src="app.js"></script>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <title>Flexbox vs CSS Grid</title>
+
+
+</head>
+
+<body>
+
+    <div class="barra de menu">
+
+    </div>
+    <div>
+        <div class="topnav" id="myTopnav">
+            
+            <div>
+                <a href="#" class="logo">
+                    <img src="imagenes/logcag.jpg" alt="Logo">
+                </a>
+                <a href="./../0inicio/0inicio.html" class="active">INICIO</a>
+                <!-- <a href="#news">PRODUCTOS</a>
+				<a href="#contact">PENDIENTE</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn" >PRODUCTOS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./../1Productos/1prod.html">Zapatillas Deportivas</a>
+                        <a href="./../2prodcutos/2prod.html">Vestimenta y Accesorios</a>
+                        <a href="./../3produtos/3pagina.html">Novedades</a>
+                     
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">MARCAS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://www.nike.com/">Nike</a>
+                        <a href="https://www.adidas.com/us">Adidas</a>
+                        <a href="https://www.head.com/es_ES/">Head</a>
+                        <a href="https://www.rogerfederer.com/">Federer</a>
+                        <a href="https://www.vans.com/en-us?_sr=1">Vans</a>
+                        <a href="https://www.footlocker.com/category/shoes/jordan.html">Jordan</a>
+                        <a href="https://www.reebok.com/">ReeBok</a>
+                        <a href="https://www.fila.com/">FILA</a>
+                    </div>
+                </div>
+               
+               
+                <a href="./../5cuentalogin/login.html">CUENTA</a>
+                <a href="./../6cuentareg//registro.html">REGISTRO</a>
+                <a href="./../4CONTACTANOS/contactanos.html">CONTACTOS</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+            </div>
+
+
+
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
+
+        </div>
+
+
+
+        <!-- <nav>
+			<a href="#" class="logo">
+				<img src="/imagenes/proyectoweb2.jpg" alt="Logo">
+			</a>
+			<div class="dropdown">
+				<a href="#">Inicio</a>
+				<div class="dropdown-content">
+					<a href="#">Submenú 1</a>
+					<a href="#">Submenú 2</a>
+					<a href="#">Submenú 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Curso</a>
+				<div class="dropdown-content">
+					<a href="#">Curso 1</a>
+					<a href="#">Curso 2</a>
+					<a href="#">Curso 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="p2.html">Postgrado</a>
+				<div class="dropdown-content">
+					<a href="#">Pos 1</a>
+					<a href="#">Pos 2</a>
+					<a href="#">Pos 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Contactos</a>
+				<div class="dropdown-content">
+					<a href="#">Con 1</a>
+					<a href="#">Con 2</a>
+					<a href="#">Con 3</a>
+				</div>
+			</div>
+		</nav> -->
+
+    </div>
+
+    <!--     
+################################################################################################# -->
+   
+
+<!-- Carrito de Compras -->
+<div class="carrito" id="carrito">
+    <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+    </div>
+
+    <div class="carrito-items">
+
+    </div>
+    <div class="carrito-total">
+        <div class="fila">
+            <strong>Tu Total</strong>
+            <span class="carrito-precio-total">
+                $120.000,00
+            </span>
+        </div>
+        <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+    </div>
+</div>
+</section>
+
+
+</div>
+
+
+
+<header><strong>
+        Stocks especiales</strong>
+    </header>
+  
+    
+   
+   
+ <section>
+    <div class="seccion1">
+    <div class="anuncio1">
+        <div class="imagen2">
+            <video class="img-caja1" controls>
+                <source src="pagina2vid/sin titulo0.mp4" type="video/mp4"></video>
+               
+             
+    
+             </div>
+         </div>
+        
+    
+    
+        <div class="anuncio2">
+            <div class="imagen2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Yq96c2-hK2w?si=VtcUL12exbJHe5KX"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="img-caja2"></iframe>
+    
+            </div>
+        </div>
+    
+   
+   
+        <div class="anuncio3">
+            <div class="imagen2">
+                <img src="pagina2img/Sin título.png" class="img-caja3">
+    
+            </div>
+        </div>
+    
+   
+    
+        <div class="anuncio4">
+            <div class="imagen2">
+                <img src="pagina2img/Sin título2.png" class="img-caja4">
+    
+            </div>
+        </div>
+        <div class="art1">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Casaca deportiva de buzo F1® </h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack1.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">$529.00</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/casaca-deportiva-de-buzo-f1%C2%AE-statement-para-hombre/627128.html?dwvar_627128_color=01'">
+                otros sitios</button>
+        </div>
+        <div class="art2">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Pantalón deportivos de buzo F1® </h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack2.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">$429.00</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/pantal%C3%B3n-deportivos-de-buzo-f1%C2%AE-statement-para-hombre/627129.html?dwvar_627129_color=01'">
+                otros sitios</button>
+        </div>
+        <div class="art3">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Mochila F1®</h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack3.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">$279.00</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/mochila-f1%C2%AE/090560.html?dwvar_090560_color=01'">
+                otros sitios</button>
+        </div>
+        <div class="art4">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Gorro con malla F1®</h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack4.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">$119.00</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/gorro-con-malla-f1%C2%AE-statement/025408.html?dwvar_025408_color=01'">
+                otros sitios</button>
+        </div>
+        <div class="art5">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Polo F1® Statement Motorsport Graphic</h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack21.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">169.00</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/polo-f1%C2%AE-statement-motorsport-graphic/627127.html?dwvar_627127_color=01'">
+                otros sitios</button>
+        </div>
+        <div class="art6">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Pantalón de buzo CLASSICS</h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack22.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">$249.00</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/pantal%C3%B3n-de-buzo-classicsand-para-hombre/624276.html?dwvar_624276_color=80#'">
+                otros sitios</button>
+        </div>
+        <div class="art7">
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>Mochila Statement Scuderia Ferrari</h3>
+                </span>
+                <div class="imagen2">
+                    <img src="pagina2img/pack23.png" alt="" class="img0" id="img1">
+            
+                </div>
+                <span class="precio-item">$299.50</span>
+            
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://pe.puma.com/pe/es/pd/mochila-statement-scuderia-ferrari/079822.html?dwvar_079822_color=01'">
+                otros sitios</button>
+        </div>
+        <div class="art8">
+        <div class="item">
+            <span class="titulo-item">
+                <h3>Zapatillas de running ForeverRun NITRO</h3>
+            </span>
+            <div class="imagen2">
+                <img src="pagina2img/pack24.png" alt="" class="img0" id="img1">
+        
+            </div>
+            <span class="precio-item">$339.50</span>
+        
+        </div>
+        <button class="boton">Comprar</button>
+        <button class="boton1"
+            onclick="location.href='https://pe.puma.com/pe/es/pd/zapatillas-de-running-foreverrun-nitro-para-hombre/377757.html?dwvar_377757_color=12'">
+            otros sitios</button>
+        </div>
+    
+   
+    
+     
+    
+    
+
+</div>
+       
+ </section>
+
+
+
+<!--     
+################################################################################################# -->
+
+
+<div>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="imagenes/logcag.jpg" class="footer_logo">
+                <p class="footer_about">En Y&L, nos dedicamos a ofrecer a nuestros clientes una experiencia de compra inigualable. Cada prenda en nuestra colección es una muestra de diseño sofisticado, confección de alta calidad y un estilo que marca la diferencia. Nuestros diseños están pensados para aquellos que buscan destacar con clase y distinción.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Esapcio <div class="bottom_line"><span></span></div>
+                </h3>
+                <p>Home Torrez Mall</p>
+                <p>Nivel A</p>
+                <p>La Paz, 0908-8787-7878-8787 POatal, Bolivia</p>
+                <p class="footer_email">yandlshop@</p>
+                <h4>(+591) 2303289</h4>
+            </div>
+            <div class="col">
+                <h3>Enlaces <div class="bottom_line"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="./../0inicio/0inicio.html">HOME</a></li>
+                    <li><a href="./../2prodcutos/2prod.html">PRODUCTOS</a></li>  
+                    <li><a href="./../5cuentalogin/login.html">CUENTA</a></li>
+                    <li><a href="./../6cuentareg/registro.html">REGISTRO</a></li>
+                    <li><a href="./../4CONTACTANOS/contactanos.html">CONTACTANOS</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>InLine <div class="bottom_line"><span></span></div>
+                </h3>
+                <form>
+                    <ion-icon class="icon" name="mail"></ion-icon>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+                </form>
+                <div class="social_icons">
+                    <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Mercado Online Y&JⒸ 2022 - Todos los derechos Reservados</p>
+    </footer>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    
+       
+       
+       
+    
+
+
+    </script>
+
+</body>
+
+</html>

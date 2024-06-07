@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="2pagina.css">
+
+    <script src="app.js"></script>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <title>Flexbox vs CSS Grid</title>
+
+
+</head>
+
+<body>
+
+    <div class="barra de menu">
+
+    </div>
+    <div>
+        <div class="topnav" id="myTopnav">
+            <div>
+                <a href="#" class="logo">
+                    <img src="imagenes/logcag.jpg" alt="Logo">
+                </a>
+                <a href="./../0inicio/0inicio.html" class="active">INICIO</a>
+                <!-- <a href="#news">PRODUCTOS</a>
+				<a href="#contact">PENDIENTE</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn" >PRODUCTOS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./../1Productos/1prod.html">Zapatillas Deportivas</a>
+                        <a href="./../2prodcutos/2prod.html">Vestimenta y Accesorios</a>
+                        <a href="./../3produtos/3pagina.html">Novedades</a>
+                     
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">MARCAS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://www.nike.com/">Nike</a>
+                        <a href="https://www.adidas.com/us">Adidas</a>
+                        <a href="https://www.head.com/es_ES/">Head</a>
+                        <a href="https://www.rogerfederer.com/">Federer</a>
+                        <a href="https://www.vans.com/en-us?_sr=1">Vans</a>
+                        <a href="https://www.footlocker.com/category/shoes/jordan.html">Jordan</a>
+                        <a href="https://www.reebok.com/">ReeBok</a>
+                        <a href="https://www.fila.com/">FILA</a>
+                    </div>
+                </div>
+               
+               
+                <a href="./../5cuentalogin/login.html">CUENTA</a>
+                <a href="./../6cuentareg//registro.html">REGISTRO</a>
+                <a href="./../4CONTACTANOS/contactanos.html">CONTACTOS</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
+
+        </div>
+
+
+
+        <!-- <nav>
+			<a href="#" class="logo">
+				<img src="/imagenes/proyectoweb2.jpg" alt="Logo">
+			</a>
+			<div class="dropdown">
+				<a href="#">Inicio</a>
+				<div class="dropdown-content">
+					<a href="#">Submenú 1</a>
+					<a href="#">Submenú 2</a>
+					<a href="#">Submenú 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Curso</a>
+				<div class="dropdown-content">
+					<a href="#">Curso 1</a>
+					<a href="#">Curso 2</a>
+					<a href="#">Curso 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="p2.html">Postgrado</a>
+				<div class="dropdown-content">
+					<a href="#">Pos 1</a>
+					<a href="#">Pos 2</a>
+					<a href="#">Pos 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#">Contactos</a>
+				<div class="dropdown-content">
+					<a href="#">Con 1</a>
+					<a href="#">Con 2</a>
+					<a href="#">Con 3</a>
+				</div>
+			</div>
+		</nav> -->
+
+    </div>
+
+    <!--     
+################################################################################################# -->
+   
+
+<!-- Carrito de Compras -->
+<div class="carrito" id="carrito">
+    <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+    </div>
+
+    <div class="carrito-items">
+
+    </div>
+    <div class="carrito-total">
+        <div class="fila">
+            <strong>Tu Total</strong>
+            <span class="carrito-precio-total">
+                $120.000,00
+            </span>
+        </div>
+        <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+    </div>
+</div>
+</section>
+
+
+</div>
+
+
+
+<header><strong>
+        CATEGORIAS</strong>
+    </header>
+  
+    <h2> ZAPATILLAS DE DEPORTIVAS</h2>
+   
+    <section>
+        <div class="fila1">
+            <div class="item1">
+            
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>ZAPATOS VELOCE I GS</h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="articulos/tennis1.png" alt="" class="img0" id="img1">
+            
+                    </div>
+                    <span class="precio-item">$60.00</span>
+            
+                </div>
+                <button class="boton">Comprar</button>
+                <button class="boton1"
+                    onclick="location.href='https://www.lecoqsportif.com/es/products/zapatos-veloce-i-gs-para-nino-2410717'">
+                    otros sitios</button>
+            
+            </div>
+            
+
+            <div class="item1">
+            
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>ZAPATOS NOAH</h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="articulos/tennis2.png" alt="" class="img0" id="img1">
+            
+                    </div>
+                    <span class="precio-item">$95.00</span>
+            
+                </div>
+                <button class="boton">Comprar</button>
+            <button class="boton1" onclick="location.href='https://www.lecoqsportif.com/es/products/zapatos-noah_2-w-mujer-2410788'">
+                otros sitios</button>
+            
+                        </div>
+
+
+            <div class="item1">
+            
+                <div class="item">
+                    <span class="titulo-item">
+                        <h3>ZAPATOS NOAH_2 RIPSTOP UNISEX</h3>
+                    </span>
+                    <div class="imagen">
+                        <img src="articulos/tennis3.png" alt="" class="img0" id="img1">
+            
+                    </div>
+                    <span class="precio-item">$95.00</span>
+            
+                </div>
+                <button class="boton">Comprar</button>
+                <button class="boton1"
+                    onclick="location.href='https://www.lecoqsportif.com/es/products/zapatos-noah_2-ripstop-unisex-2410785'">
+                    otros sitios</button>
+            
+            </div>
+
+
+
+        <div class="item1">
+        
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>ZAPATOS ASTRA_2 UNISEX</h3>
+                </span>
+                <div class="imagen">
+                    <img src="articulos/tennis4.png" alt="" class="img0" id="img1">
+        
+                </div>
+                <span class="precio-item">$80.00</span>
+        
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://www.lecoqsportif.com/es/products/zapatos-astra_2-unisex-azul-2410687'">
+                otros sitios</button>
+        
+        </div>
+
+
+
+
+
+        <div class="item1">
+        
+            <div class="item">
+                <span class="titulo-item">
+                    <h3>strNike Air Max Dn</h3>
+                </span>
+                <div class="imagen">
+                    <img src="articulos/tennis5.png" alt="" class="img0" id="img1">
+        
+                </div>
+                <span class="precio-item">$110.00</span>
+        
+            </div>
+            <button class="boton">Comprar</button>
+            <button class="boton1"
+                onclick="location.href='https://www.lecoqsportif.com/es/products/zapatos-efr-oly-r1100_2-unisex-2410369'">
+                otros sitios</button>
+        
+        </div>
+
+
+
+</div>
+
+
+
+        
+        <h2> ZAPATILLAS DE FUTBOL</h2>
+       
+            <div class="fila1">
+                <div class="item1">
+        
+                    <div class="item">
+                        <span class="titulo-item">
+                            <h3>Nike Mercurial Vapor 15 Elite</h3>
+                        </span>
+                        <div class="imagen">
+                            <img src="articulos/soccer1.png" alt="" class="img0" id="img1">
+        
+                        </div>
+                        <span class="precio-item">$234.97</span>
+        
+                    </div>
+                    <button class="boton">Comprar</button>
+                    <button class="boton1"
+                        onclick="location.href='https://www.nike.com/us/es/t/tacos-de-f%C3%BAtbol-de-corte-low-ag-pro-vapor-15-elite-mercurial-dream-speed-DW9qRM/DJ5167-040'">
+                        otros sitios</button>
+        
+                </div>
+        
+        
+                <div class="item1">
+        
+                    <div class="item">
+                        <span class="titulo-item">
+                            <h3>Nike Vapor 15 Academy Mercurial</h3>
+                        </span>
+                        <div class="imagen">
+                            <img src="articulos/soccer2.png" alt="" class="img0" id="img1">
+        
+                        </div>
+                        <span class="precio-item">$85.97</span>
+        
+                    </div>
+                    <button class="boton">Comprar</button>
+                    <button class="boton1"
+                        onclick="location.href='https://www.nike.com/us/es/t/tacos-de-f%C3%BAtbol-ag-de-corte-low-vapor-15-academy-mercurial-dream-speed-gb4RSn/FD1160-600'">
+                        otros sitios</button>
+        
+                </div>
+        
+        
+                <div class="item1">
+        
+                    <div class="item">
+                        <span class="titulo-item">
+                            <h3>Nike Jr. Superfly 9 Club Mercurial</h3>
+                        </span>
+                        <div class="imagen">
+                            <img src="articulos/soccer3.png" alt="" class="img0" id="img1">
+        
+                        </div>
+                        <span class="precio-item">$46.97</span>
+        
+                    </div>
+                    <button class="boton">Comprar</button>
+                    <button class="boton1"
+                        onclick="location.href='https://www.nike.com/us/es/t/tacos-de-f%C3%BAtbol-de-corte-high-ic-talla-grande-jr-superfly-9-club-mercurial-dream-speed-SVMHxB/FV0399-300'">
+                        otros sitios</button>
+        
+                </div>
+        
+        
+        
+                <div class="item1">
+        
+                    <div class="item">
+                        <span class="titulo-item">
+                            <h3>Nike Mercurial Vapor 15 Club</h3>
+                        </span>
+                        <div class="imagen">
+                            <img src="articulos/soccer4.png" alt="" class="img0" id="img1">
+        
+                        </div>
+                        <span class="precio-item">$80,00€</span>
+        
+                    </div>
+                    <button class="boton">Comprar</button>
+                    <button class="boton1"
+                        onclick="location.href='https://www.nike.com/us/es/t/tacos-de-f%C3%BAtbol-para-terrenos-m%C3%BAltiples-de-corte-low-mercurial-vapor-15-club-WGNRnc/DJ5963-700'">
+                        otros sitios</button>
+        
+                </div>
+        
+        
+        
+        
+        
+                <div class="item1">
+        
+                    <div class="item">
+                        <span class="titulo-item">
+                            <h3>Nike Mercurial Vapor 15 Pro</h3>
+                        </span>
+                        <div class="imagen">
+                            <img src="articulos/soccer5.png" alt="" class="img0" id="img1">
+        
+                        </div>
+                        <span class="precio-item">$160</span>
+        
+                    </div>
+                    <button class="boton">Comprar</button>
+                    <button class="boton1"
+                        onclick="location.href='https://www.nike.com/us/es/t/tacos-de-f%C3%BAtbol-fg-de-corte-low-mercurial-vapor-15-prClZQ/DJ5603-601'">
+                        otros sitios</button>
+        
+                </div>
+            </div>
+
+           
+
+                        
+
+
+               
+
+
+
+
+                <h2> ZAPATILLAS BASKETBALL</h2>
+
+                
+                <div class="fila1">
+                    <div class="item1">
+                
+                        <div class="item">
+                            <span class="titulo-item">
+                                <h3>ZAPATILLAS AE 1 NEW WAVE</h3>
+                            </span>
+                            <div class="imagen">
+                                <img src="articulos/basketball1.png" alt="" class="img0" id="img1">
+                
+                            </div>
+                            <span class="precio-item">$169.990</span>
+                
+                        </div>
+                        <button class="boton">Comprar</button>
+                        <button class="boton1"
+                            onclick="location.href='https://www.adidas.cl/zapatillas-ae-1-new-wave/IF1860.html'">
+                            otros sitios</button>
+                
+                    </div>
+                
+                
+                    <div class="item1">
+                
+                        <div class="item">
+                            <span class="titulo-item">
+                                <h3>ZAPATILLAS TRAE YOUNG 3 LOW</h3>
+                            </span>
+                            <div class="imagen">
+                                <img src="articulos/basketball2.png" alt="" class="img0" id="img1">
+                
+                            </div>
+                            <span class="precio-item">$149.990</span>
+                
+                        </div>
+                        <button class="boton">Comprar</button>
+                        <button class="boton1"
+                            onclick="location.href='https://www.adidas.cl/zapatillas-trae-young-3-low/IE2708.html'">
+                            otros sitios</button>
+                
+                    </div>
+                
+                
+                    <div class="item1">
+                
+                        <div class="item">
+                            <span class="titulo-item">
+                                <h3>ZAPATILLAS AE 1 THE FUTURE</h3>
+                            </span>
+                            <div class="imagen">
+                                <img src="articulos/basketball3.png" alt="" class="img0" id="img1">
+                
+                            </div>
+                            <span class="precio-item">$119.990</span>
+                
+                        </div>
+                        <button class="boton">Comprar</button>
+                        <button class="boton1"
+                            onclick="location.href='https://www.adidas.cl/zapatillas-ae-1-the-future/IF1858.html'">
+                            otros sitios</button>
+                
+                    </div>
+                
+                
+                
+                    <div class="item1">
+                
+                        <div class="item">
+                            <span class="titulo-item">
+                                <h3>ZAPATILLAS TRAE YOUNG UNLIMITED 2 LOW</h3>
+                            </span>
+                            <div class="imagen">
+                                <img src="articulos/basketball4.png" alt="" class="img0" id="img1">
+                
+                            </div>
+                            <span class="precio-item">$79.990</span>
+                
+                        </div>
+                        <button class="boton">Comprar</button>
+                        <button class="boton1"
+                            onclick="location.href='https://www.adidas.cl/zapatillas-trae-young-unlimited-2-low/IE7765.html'">
+                            otros sitios</button>
+                
+                    </div>
+                
+                
+                
+                
+                
+                    <div class="item1">
+                
+                        <div class="item">
+                            <span class="titulo-item">
+                                <h3>ZAPATILLAS TRAE YOUNG UNLIMITED 2</h3>
+                            </span>
+                            <div class="imagen">
+                                <img src="articulos/basketball5.png" alt="" class="img0" id="img1">
+                
+                            </div>
+                            <span class="precio-item">$99.990</span>
+                
+                        </div>
+                        <button class="boton">Comprar</button>
+                        <button class="boton1"
+                            onclick="location.href='https://www.adidas.cl/zapatillas-trae-young-unlimited-2-low/IE7766.html'">
+                            otros sitios</button>
+                
+                    </div>
+                        
+                </div>
+
+                    <h2> ZAPATILLAS DE VOLEIBOY</h2>
+                    <div class="fila1">
+                        <div class="item1">
+                    
+                            <div class="item">
+                                <span class="titulo-item">
+                                    <h3>NIKE AIR ZOOM HYPERACE 3</h3>
+                                </span>
+                                <div class="imagen">
+                                    <img src="articulos/voleiboy1.png" alt="" class="img0" id="img1">
+                    
+                                </div>
+                                <span class="precio-item">$125.00</span>
+                    
+                            </div>
+                            <button class="boton">Comprar</button>
+                            <button class="boton1" onclick="location.href='https://univolei.com/zapatillas-voleibol-nike/1249-11118-nike-air-zoom-hyperace.html#/185-talla_europa_nike-talla_38_5_6_us_7_5_usw'">
+                                otros sitios</button>
+                    
+                        </div>
+                    
+                    
+                        <div class="item1">
+                    
+                            <div class="item">
+                                <span class="titulo-item">
+                                    <h3>MIZUNO MOMENTUM 3 UNISEX</h3>
+                                </span>
+                                <div class="imagen">
+                                    <img src="articulos/voleiboy2.png" alt="" class="img0" id="img1">
+                    
+                                </div>
+                                <span class="precio-item">$119.00</span>
+                    
+                            </div>
+                            <button class="boton">Comprar</button>
+                            <button class="boton1" onclick="location.href='https://univolei.com/zapatillas-voleibol-mizuno/1212-10712-mizuno-momentum-3-.html#/91-talla_europa_mizuno-40_eu'">
+                                otros sitios</button>
+                    
+                        </div>
+                    
+                    
+                        <div class="item1">
+                    
+                            <div class="item">
+                                <span class="titulo-item">
+                                    <h3>MIZUNO WAVE VOLTAGE UNISEX</h3>
+                                </span>
+                                <div class="imagen">
+                                    <img src="articulos/voleiboy3.png" alt="" class="img0" id="img1">
+                    
+                                </div>
+                                <span class="precio-item">$84.00</span>
+                    
+                            </div>
+                            <button class="boton">Comprar</button>
+                            <button class="boton1" onclick="location.href='https://univolei.com/zapatillas-voleibol-mizuno/1232-11000-mizuno-wave-voltage-unisex.html#/96-talla_europa_mizuno-43_eu'">
+                                otros sitios</button>
+                    
+                        </div>
+                    
+                    
+                    
+                        <div class="item1">
+                    
+                            <div class="item">
+                                <span class="titulo-item">
+                                    <h3>MIZUNO WAVE LIGHTNING Z8 UNISEX</h3>
+                                </span>
+                                <div class="imagen">
+                                    <img src="articulos/voleiboy4.png" alt="" class="img0" id="img1">
+                    
+                                </div>
+                                <span class="precio-item">$120.00 </span>
+                    
+                            </div>
+                            <button class="boton">Comprar</button>
+                            <button class="boton1"
+                                onclick="location.href='https://univolei.com/zapatillas-voleibol-mizuno/1231-10973-mizuno-wave-lightning-z8-unisex.html#/89-talla_europa_mizuno-38_5_eu'">
+                                otros sitios</button>
+                    
+                        </div>
+                    
+                    
+                    
+                    
+                    
+                        <div class="item1">
+                    
+                            <div class="item">
+                                <span class="titulo-item">
+                                    <h3>MIZUNO LIGHTNING STAR Jr.</h3>
+                                </span>
+                                <div class="imagen">
+                                    <img src="articulos/voleiboy5.png" alt="" class="img0" id="img1">
+                    
+                                </div>
+                                <span class="precio-item">$59.50</span>
+                    
+                            </div>
+                            <button class="boton">Comprar</button>
+                            <button class="boton1"
+                                onclick="location.href='https://univolei.com/zapatillas/1230-10977-mizuno-lightning-star-jr.html#/85-talla_europa_mizuno-36_eu'">
+                                otros sitios</button>
+                    
+                        </div>
+
+              </div>
+        
+        
+        
+        
+        </div>
+ </section>
+<!--     
+################################################################################################# -->
+
+
+<div>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="imagenes/logcag.jpg" class="footer_logo">
+                <p class="footer_about">En Y&L, nos dedicamos a ofrecer a nuestros clientes una experiencia de compra inigualable. Cada prenda en nuestra colección es una muestra de diseño sofisticado, confección de alta calidad y un estilo que marca la diferencia. Nuestros diseños están pensados para aquellos que buscan destacar con clase y distinción.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Esapcio <div class="bottom_line"><span></span></div>
+                </h3>
+                <p>Home Torrez Mall</p>
+                <p>Nivel A</p>
+                <p>La Paz, 0908-8787-7878-8787 POatal, Bolivia</p>
+                <p class="footer_email">yandlshop@</p>
+                <h4>(+591) 2303289</h4>
+            </div>
+            <div class="col">
+                <h3>Enlaces <div class="bottom_line"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="./../0inicio/0inicio.html">HOME</a></li>
+                    <li><a href="./../2prodcutos/2prod.html">PRODUCTOS</a></li>  
+                    <li><a href="./../5cuentalogin/login.html">CUENTA</a></li>
+                    <li><a href="./../6cuentareg/registro.html">REGISTRO</a></li>
+                    <li><a href="./../4CONTACTANOS/contactanos.html">CONTACTANOS</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>InLine <div class="bottom_line"><span></span></div>
+                </h3>
+                <form>
+                    <ion-icon class="icon" name="mail"></ion-icon>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+                </form>
+                <div class="social_icons">
+                    <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+                    <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Mercado Online Y&JⒸ 2022 - Todos los derechos Reservados</p>
+    </footer>
+
+    
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    
+       
+       
+       
+    
+
+
+    </script>
+
+</body>
+
+</html>
